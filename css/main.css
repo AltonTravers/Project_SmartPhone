@@ -222,6 +222,52 @@ img {
           pointer-events: none;
           transition: all 0.5s ease; }
 
+.features {
+  padding: 8rem 0; }
+  .features .container.flex {
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center; }
+    .features .container.flex .features-img {
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      text-align: right; }
+      .features .container.flex .features-img img {
+        width: 400px; }
+    .features .container.flex .features-content.flex {
+      flex: 1;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      padding: 0 2rem; }
+      .features .container.flex .features-content.flex .title {
+        padding-left: 3rem; }
+      .features .container.flex .features-content.flex div:nth-child(2),
+      .features .container.flex .features-content.flex div:nth-child(3),
+      .features .container.flex .features-content.flex div:nth-child(4) {
+        padding-right: 3rem; }
+        .features .container.flex .features-content.flex div:nth-child(2) h3,
+        .features .container.flex .features-content.flex div:nth-child(3) h3,
+        .features .container.flex .features-content.flex div:nth-child(4) h3 {
+          color: #aca3ba; }
+      .features .container.flex .features-content.flex .title {
+        padding-right: 3rem; }
+        .features .container.flex .features-content.flex .title p {
+          color: #aca3ba; }
+        .features .container.flex .features-content.flex .title h1 {
+          font-size: 3rem;
+          font-weight: 600; }
+      .features .container.flex .features-content.flex > div {
+        margin: 1rem 0; }
+        .features .container.flex .features-content.flex > div i {
+          padding: 3rem;
+          color: #bca0dc; }
+
+.fa-laptop-house:before {
+  width: 20px;
+  height: 20px; }
+
 .slick-lightbox-close {
   right: 3rem; }
   .slick-lightbox-close::before {
