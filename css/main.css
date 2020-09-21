@@ -162,9 +162,10 @@ img {
       margin: 2rem auto;
       max-width: 40rem; }
   .gallery .gallery-slideshow {
-    padding: 5rem 0 10rem;
+    padding: 5rem 0 7rem;
     overflow-x: hidden;
-    width: 100%; }
+    margin: auto;
+    width: 80%; }
     .gallery .gallery-slideshow .slick-dots li button:before {
       font-size: 0.8rem;
       color: #7d1eff; }
@@ -172,14 +173,14 @@ img {
       bottom: -50px; }
     .gallery .gallery-slideshow .slick .grid-3 {
       grid-gap: 1rem;
-      grid-template-columns: repeat(3, minmax(200, 300));
+      grid-template-columns: repeat(3, 250px);
+      grid-template-rows: repeat(1, 300px);
       align-items: center;
       justify-content: center; }
       .gallery .gallery-slideshow .slick .grid-3 div {
         background: #fff;
         overflow: hidden;
         height: 450px;
-        width: 350px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -191,7 +192,6 @@ img {
         .gallery .gallery-slideshow .slick .grid-3 div:hover::before {
           opacity: 0.7; }
         .gallery .gallery-slideshow .slick .grid-3 div img {
-          width: 350px;
           object-fit: cover;
           object-position: 50% 50%;
           transition: all 0.5s ease; }
@@ -223,45 +223,114 @@ img {
 
 .features {
   padding: 8rem 0; }
-  .features .container.flex {
+  .features .container.features-1 .flex {
     margin: 0 auto;
     align-items: center;
     justify-content: center; }
-    .features .container.flex .features-img {
+    .features .container.features-1 .flex .features1-img {
       flex: 1;
       align-items: center;
       justify-content: center;
       text-align: right; }
-      .features .container.flex .features-img img {
+      .features .container.features-1 .flex .features1-img img {
         width: 400px; }
-    .features .container.flex .features-content.flex {
+    .features .container.features-1 .flex .features1-content.flex {
+      min-width: 550px;
       flex: 1;
       flex-direction: column;
       justify-content: start;
       align-items: start;
       padding: 0 2rem; }
-      .features .container.flex .features-content.flex .title {
+      .features .container.features-1 .flex .features1-content.flex .title {
         padding-left: 3rem; }
-      .features .container.flex .features-content.flex div:nth-child(2),
-      .features .container.flex .features-content.flex div:nth-child(3),
-      .features .container.flex .features-content.flex div:nth-child(4) {
+      .features .container.features-1 .flex .features1-content.flex div:nth-child(2),
+      .features .container.features-1 .flex .features1-content.flex div:nth-child(3),
+      .features .container.features-1 .flex .features1-content.flex div:nth-child(4) {
         padding-right: 3rem; }
-        .features .container.flex .features-content.flex div:nth-child(2) h3,
-        .features .container.flex .features-content.flex div:nth-child(3) h3,
-        .features .container.flex .features-content.flex div:nth-child(4) h3 {
+        .features .container.features-1 .flex .features1-content.flex div:nth-child(2) h3,
+        .features .container.features-1 .flex .features1-content.flex div:nth-child(3) h3,
+        .features .container.features-1 .flex .features1-content.flex div:nth-child(4) h3 {
           color: #aca3ba; }
-      .features .container.flex .features-content.flex .title {
+      .features .container.features-1 .flex .features1-content.flex .title {
         padding-right: 3rem; }
-        .features .container.flex .features-content.flex .title p {
+        .features .container.features-1 .flex .features1-content.flex .title p {
           color: #aca3ba; }
-        .features .container.flex .features-content.flex .title h1 {
+        .features .container.features-1 .flex .features1-content.flex .title h1 {
           font-size: 3rem;
           font-weight: 600; }
-      .features .container.flex .features-content.flex > div {
+      .features .container.features-1 .flex .features1-content.flex > div {
         margin: 1rem 0; }
-        .features .container.flex .features-content.flex > div i {
+        .features .container.features-1 .flex .features1-content.flex > div i {
           padding: 3rem;
           color: #bca0dc; }
+  .features .container.features-2 {
+    margin-top: 12rem; }
+    .features .container.features-2 .flex {
+      margin: 0 auto;
+      align-items: center;
+      justify-content: center; }
+      .features .container.features-2 .flex .features2-content.flex {
+        min-width: 550px;
+        flex: 1;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        margin-left: 10%; }
+        .features .container.features-2 .flex .features2-content.flex .title {
+          align-self: start; }
+        .features .container.features-2 .flex .features2-content.flex > div:nth-child(2),
+        .features .container.features-2 .flex .features2-content.flex > div:nth-child(3),
+        .features .container.features-2 .flex .features2-content.flex > div:nth-child(4) {
+          position: relative;
+          width: 65%;
+          margin: 1rem 0; }
+          .features .container.features-2 .flex .features2-content.flex > div:nth-child(2) h3,
+          .features .container.features-2 .flex .features2-content.flex > div:nth-child(3) h3,
+          .features .container.features-2 .flex .features2-content.flex > div:nth-child(4) h3 {
+            color: #aca3ba; }
+        .features .container.features-2 .flex .features2-content.flex .storage #storage-bar {
+          height: 5px;
+          background: #bca0dc;
+          width: 30%;
+          margin-top: 1rem; }
+        .features .container.features-2 .flex .features2-content.flex .storage #storage-pct {
+          position: absolute;
+          right: -30%;
+          bottom: 0; }
+        .features .container.features-2 .flex .features2-content.flex .battery #battery-bar {
+          height: 5px;
+          background: #bca0dc;
+          width: 100%;
+          margin-top: 1rem; }
+        .features .container.features-2 .flex .features2-content.flex .battery #battery-pct {
+          position: absolute;
+          right: -30%;
+          bottom: 0; }
+        .features .container.features-2 .flex .features2-content.flex .surface #surface-bar {
+          height: 5px;
+          background: #bca0dc;
+          width: 30%;
+          margin-top: 1rem; }
+        .features .container.features-2 .flex .features2-content.flex .surface #surface-pct {
+          position: absolute;
+          right: -30%;
+          bottom: 0; }
+        .features .container.features-2 .flex .features2-content.flex .title {
+          padding-right: 5rem; }
+          .features .container.features-2 .flex .features2-content.flex .title p {
+            color: #aca3ba; }
+          .features .container.features-2 .flex .features2-content.flex .title h1 {
+            font-size: 3rem;
+            font-weight: 600; }
+        .features .container.features-2 .flex .features2-content.flex > div {
+          margin: 1rem 0; }
+      .features .container.features-2 .flex .features2-img {
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        text-align: left; }
+        .features .container.features-2 .flex .features2-img img {
+          width: 400px; }
 
 .fa-laptop-house:before {
   width: 20px;
