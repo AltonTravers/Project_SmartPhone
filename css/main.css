@@ -222,7 +222,7 @@ img {
           transition: all 0.5s ease; }
 
 .features {
-  padding: 8rem 0; }
+  padding-top: 8rem; }
   .features .container.features-1 .flex {
     margin: 0 auto;
     align-items: center;
@@ -331,6 +331,81 @@ img {
         text-align: left; }
         .features .container.features-2 .flex .features2-img img {
           width: 400px; }
+  .features .features-3 {
+    background: url("../images/about_bg.png") center center/cover no-repeat;
+    background-attachment: fixed;
+    padding: 8rem 0 5rem; }
+    .features .features-3 div {
+      max-width: 600px;
+      margin: auto; }
+      .features .features-3 div h2 {
+        font-size: 1rem;
+        color: #aca3ba;
+        margin-bottom: 1rem; }
+      .features .features-3 div h1 {
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 1.1; }
+        .features .features-3 div h1:first-of-type {
+          color: #7d1eff; }
+      .features .features-3 div p {
+        margin: 2rem 0; }
+      .features .features-3 div .iframe-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        height: 0; }
+        .features .features-3 div .iframe-container iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%; }
+  .features .features-4 {
+    background: #3d3d3d; }
+    .features .features-4 .container {
+      padding: 6rem 0;
+      text-align: center; }
+      .features .features-4 .container p {
+        color: #8d8d8d;
+        padding: 2rem 0; }
+      .features .features-4 .container h1 {
+        line-height: 1.1;
+        color: #fff;
+        font-size: 3rem;
+        font-weight: 600; }
+      .features .features-4 .container .grid-3 {
+        margin: 3rem 5rem;
+        grid-gap: 2rem; }
+        .features .features-4 .container .grid-3 div {
+          background: #333;
+          padding-bottom: 5rem;
+          color: #fff; }
+          .features .features-4 .container .grid-3 div p {
+            padding: 3rem 0 1rem; }
+          .features .features-4 .container .grid-3 div h1 {
+            font-size: 2rem; }
+          .features .features-4 .container .grid-3 div h3 {
+            padding: 2rem; }
+        .features .features-4 .container .grid-3 .product-1 a {
+          color: #47e5b6; }
+        .features .features-4 .container .grid-3 .product-2 a {
+          color: #bca0dc; }
+        .features .features-4 .container .grid-3 .product-3 a {
+          color: #f3b560; }
+      .features .features-4 .container .see-more {
+        color: #fff;
+        border: 2px solid #fff;
+        border-radius: 40px;
+        padding: 1rem 2rem;
+        font-size: 0.8rem;
+        transition: all 0.5s ease; }
+        .features .features-4 .container .see-more:hover {
+          color: rgba(255, 255, 255, 0.658);
+          border: 2px solid rgba(255, 255, 255, 0.658); }
+
+.gallery .gallery-slideshow .slick .slick-dots {
+  bottom: -60px; }
 
 .fa-laptop-house:before {
   width: 20px;
