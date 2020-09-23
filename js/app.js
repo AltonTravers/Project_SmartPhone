@@ -9,4 +9,12 @@ $(() => {
   $(".gallery-slideshow .slick").slick({ dots: true });
 
   $(".gallery-slideshow .slick").slickLightbox();
+
+  $(".review-slick").slick({
+    dots: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+  });
 });
