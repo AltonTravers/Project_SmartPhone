@@ -27,6 +27,12 @@
       integrity="sha512-GPEZI1E6wle+Inl8CkTU3Ncgc9WefoWH4Jp8urbxZNbaISy0AhzIMXVzdK2GEf1+OVhA+MlcwPuNve3rL1F9yg=="
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
 
     <link rel="stylesheet" href="./css/main.css" />
 
@@ -127,7 +133,6 @@
                   by the name of Lorem Ipsum decided to leave for the far World
                   of Grammar.
                 </p>
-              </div>
             </div>
           </div>
         </div>
@@ -272,6 +277,47 @@
           e.target.parentElement.classList.add("current");
           detailHeader[0].parentElement.classList.remove("current");
           detailHeader[1].parentElement.classList.remove("current");
+          detailContent.innerHTML = `
+          <h3>Reviews</h3>
+                <p>
+                  There are no reviews yet. Be the first to review “Charcoal
+                  Black” Your email address will not be published. Required
+                  fields are marked <i class="far fa-check-circle"></i>
+                </p>
+                <form action="#">
+                  <div class="rating">
+                    <input type="radio" id="star-5" name="star" />
+                    <label for="star-5"></label>
+                    <input type="radio" id="star-4" name="star" />
+                    <label for="star-4"></label>
+                    <input type="radio" id="star-3" name="star" />
+                    <label for="star-3"></label>
+                    <input type="radio" id="star-2" name="star" />
+                    <label for="star-2"></label>
+                    <input type="radio" id="star-1" name="star" />
+                    <label for="star-1"></label>
+                  </div>
+                  <label for="review" id="review">
+                    Your review <i class="far fa-check-circle"></i>
+                  </label>
+                  <textarea
+                    name="review"
+                    id="review-text"
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                  <label for="name" id="name">
+                    Name <i class="far fa-check-circle"></i>
+                  </label>
+                  <input type="text" name="name" />
+                  <label for="email" id="email">
+                    Email <i class="far fa-check-circle"></i>
+                  </label>
+                  <input type="email" name="email" />
+                  <button type="submit" value="Submit" class="">Submit</button>
+                </form>
+              </div>
+          `
         }
       }
     </script>
