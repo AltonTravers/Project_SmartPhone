@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/9efeb9fe68.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+      integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.css"
+      integrity="sha512-GPEZI1E6wle+Inl8CkTU3Ncgc9WefoWH4Jp8urbxZNbaISy0AhzIMXVzdK2GEf1+OVhA+MlcwPuNve3rL1F9yg=="
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <title>Aton's Project 1</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <!-- Navbar -->
+      <nav class="shop-navbar">
+        <div class="container">
+          <div class="flex">
+            <h1><span>Alton</span>Chan</h1>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html#gallery">Gallery</a></li>
+              <li><a href="index.html#features">Features</a></li>
+              <li><a href="index.html#review">Reviews</a></li>
+              <li><a href="#">Shop</a></li>
+            </ul>
+
+            <div class="cart-icon">
+              <a href="#">
+                <i class="fas fa-shopping-cart"></i>
+                <p class="in-cart">0</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- shop -->
+      <div class="shop" id="shop">
+        <div class="container">
+          <div class="shop-title">
+            <h1>Shop</h1>
+            <p>Home > <span>Cart</span></p>
+          </div>
+          <div class="cart-container">
+              <!-- <div class="empty flex">
+                  <div class="left">
+                    <i class="far fa-compass "></i>
+                  </div>
+                  <div class="right">
+                      <h3>CART IS EMPTY</h3>
+                      <p>Looks like there is no items in your cart.</p>
+                  </div>
+              </div>
+              <div class="empty-word">
+                <h2>
+                    Your cart is 
+                </h2>
+                <h1>CURRENTLY</h1>
+                <h1>EMPTY</h1>
+              </div> -->
+              <div class="cart-content flex">
+                  <div class="cart-header">
+                      <div class="cart-grid">
+                          <div></div>
+                          <div></div>
+                          <div><p>Product</p></div>
+                          <div>
+                              Price
+                          </div>
+                          <div>
+                            Quantity
+                          </div>
+                          <div>
+                            Subtotal
+                          </div>
+                        </div>
+                  </div>
+                  <div class="cart-body">
+                        <div class="cart-grid">
+                            <div class="remove-item">
+                                <i class="fas fa-times"></i>
+                            </div>
+                            <div class="cart-product-img"><img src="./images/blackproduct-2.jpg" alt=""></div>
+                            <div>Charcoal Black</div>
+                            <div>$42.00</div>
+                            <div class="no-of-product">
+                                <span class="add-item-no"><i class="fas fa-arrow-up"></i></span>
+                                <span class="item-no">1</span>
+                                <span class="deduct-item-no"
+                                  ><i class="fas fa-arrow-down"></i
+                                ></span>
+                              </div>
+                            <div>$42.00</div>
+                        </div>
+                  </div>
+              </div>
+              <div class="cart-total flex">
+                    <div class="left"></div>
+                    <div class="right">
+                        <h2>Cart Total</h2>
+                        <div class="grid-2">
+                            <div>Total</div>
+                            <div class="total-price">$42.00</div>
+                        </div>
+                        <div class="check-out">
+                            <a href="#" class="btn">PROCEED TO CHECKOUT</a>
+                        </div>
+                    </div>
+              </div>
+          </div>
+        </div>
+        
+        </div>
+ 
+    <!-- Footer-1 -->
+    <footer class="footer-1">
+      <ul>
+        <li>
+          <a href=""> <i class="fab fa-youtube fa-1x"></i> </a>
+        </li>
+        <li>
+          <a href=""> <i class="fab fa-twitter fa-1x"></i> </a>
+        </li>
+        <li>
+          <a href=""> <i class="fab fa-facebook fa-1x"></i> </a>
+        </li>
+        <li>
+          <a href=""> <i class="fab fa-instagram fa-1x"></i> </a>
+        </li>
+      </ul>
+    </footer>
+    <!-- Footer-2 -->
+    <footer class="footer-2">
+      <div class="container grid-4">
+        <div>
+          <h3>AltonChan</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis,
+            voluptatem.
+          </p>
+          <ul>
+            <li>
+              <a href=""><i class="fab fa-cc-visa"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-cc-mastercard"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-cc-amex"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-cc-paypal"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-cc-jcb"></i></a>
+            </li>
+          </ul>
+          <span><i class="fas fa-lock"></i>Lorem ipsum dolor sit amet.</span>
+        </div>
+        <div>
+          <div class="right">
+            <h4>BEST EXPERIENCE</h4>
+            <ul>
+              <li><a href="">FAQ</a></li>
+              <li><a href="">Shipment</a></li>
+              <li><a href="">Returns</a></li>
+              <li><a href="">Gift Cards</a></li>
+              <li><a href="">Policies</a></li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="right">
+            <h4>COMPANY</h4>
+            <ul>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Press</a></li>
+              <li><a href="">Offices</a></li>
+              <li><a href="">Affiliates</a></li>
+              <li><a href="">Giveaway</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyright"><p>2020 &copy; AltonChan</p></div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"
+      integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.js"
+      integrity="sha512-jGARnXmmqjqH0OuF7bFoLjZiVwFwoFvkgGqJpUf2TNjMnKjK1rrVCwmFoUGq564c2Auaf6ULAknrnUGKK1SnqQ=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
