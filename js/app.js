@@ -19,9 +19,26 @@ $(() => {
     slidesToShow: 1,
     adaptiveHeight: true,
   });
+
+  hoverTimeout = setTimeout(function () {
+    $(".nav-shopping-cart").addClass("show-or-hide");
+  }, 1000);
+  $(".nav-cart-icon, .nav-shopping-cart").hover(
+    function () {
+      clearTimeout(hoverTimeout);
+      $(".nav-shopping-cart").removeClass("show-or-hide");
+    },
+    function () {
+      hoverTimeout = setTimeout(function () {
+        $(".nav-shopping-cart").addClass("show-or-hide");
+      }, 1000);
+    }
+  );
 });
 
 const navIncart = document.querySelector(".in-cart");
+
+document.addEventListener("click", (e) => console.log(e.target));
 
 function loadIncartNo() {
   let IncartNo;

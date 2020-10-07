@@ -66,6 +66,9 @@ img {
   border-bottom: 3px #7d1eff solid;
   color: #7d1eff; }
 
+.show-or-hide {
+  display: none !important; }
+
 .navbar {
   width: 100%;
   position: fixed;
@@ -94,11 +97,15 @@ img {
         .navbar .flex ul li a:hover {
           color: #7e7e7e; }
     .navbar .flex .cart-icon {
+      position: relative;
       display: flex;
       justify-content: flex-end;
       flex: 1; }
       .navbar .flex .cart-icon a {
         position: relative; }
+        .navbar .flex .cart-icon a p,
+        .navbar .flex .cart-icon a i {
+          pointer-events: none; }
       .navbar .flex .cart-icon .in-cart {
         display: flex;
         align-items: center;
@@ -116,6 +123,67 @@ img {
         padding: 0 0.2rem;
         font-weight: bold;
         text-align: center; }
+      .navbar .flex .cart-icon .nav-shopping-cart {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        background: #333;
+        color: #fff;
+        width: 400px; }
+        .navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart {
+          flex-direction: column;
+          padding-top: 1rem; }
+          .navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .flex.nav-incart {
+            box-sizing: border-box;
+            margin: 0.5rem 0;
+            padding: 0 2rem;
+            width: 100%;
+            align-items: flex-start;
+            justify-content: space-between; }
+            .navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .flex.nav-incart .img {
+              width: 60px;
+              display: flex;
+              align-items: center;
+              cursor: pointer; }
+            .navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .flex.nav-incart .description {
+              font-weight: bolder;
+              margin-left: 1rem;
+              flex: 1;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start; }
+              .navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .flex.nav-incart .description h3 {
+                cursor: pointer; }
+              .navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .flex.nav-incart .description p {
+                color: #7e7e7e; }
+              .navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .flex.nav-incart .description .color {
+                color: #9347ff; }
+            .navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .flex.nav-incart > i {
+              cursor: pointer;
+              color: #fff;
+              font-size: 2rem; }
+          .navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .nav-cart-total {
+            margin-top: 1rem;
+            padding: 1rem 0;
+            border-top: 0.1px #444444 solid;
+            border-bottom: 0.1px #444444 solid;
+            width: 100%;
+            color: #919191;
+            font-weight: bold;
+            font-size: 1.2rem; }
+          .navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .flex.nav-cart-bottom {
+            width: 100%;
+            justify-content: space-evenly;
+            color: #fff;
+            font-weight: bold; }
+            .navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .flex.nav-cart-bottom .left,
+            .navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .flex.nav-cart-bottom .right {
+              cursor: pointer;
+              flex: 1;
+              height: 100%;
+              padding: 2rem; }
+            .navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .flex.nav-cart-bottom .left {
+              border-right: 0.1px #444444 solid; }
 
 .navbar-dark {
   background-color: #fff;
@@ -154,9 +222,13 @@ img {
     .shop-navbar .flex .cart-icon {
       display: flex;
       justify-content: flex-end;
+      position: relative;
       flex: 1; }
       .shop-navbar .flex .cart-icon a {
         position: relative; }
+        .shop-navbar .flex .cart-icon a p,
+        .shop-navbar .flex .cart-icon a i {
+          pointer-events: none; }
       .shop-navbar .flex .cart-icon .in-cart {
         display: flex;
         align-items: center;
@@ -175,6 +247,67 @@ img {
         padding: 0 0.2rem;
         font-weight: bold;
         text-align: center; }
+      .shop-navbar .flex .cart-icon .nav-shopping-cart {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        background: #333;
+        color: #fff;
+        width: 400px; }
+        .shop-navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart {
+          flex-direction: column;
+          padding-top: 1rem; }
+          .shop-navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .flex.nav-incart {
+            box-sizing: border-box;
+            margin: 0.5rem 0;
+            padding: 0 2rem;
+            width: 100%;
+            align-items: flex-start;
+            justify-content: space-between; }
+            .shop-navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .flex.nav-incart .img {
+              width: 60px;
+              display: flex;
+              align-items: center;
+              cursor: pointer; }
+            .shop-navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .flex.nav-incart .description {
+              font-weight: bolder;
+              margin-left: 1rem;
+              flex: 1;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start; }
+              .shop-navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .flex.nav-incart .description h3 {
+                cursor: pointer; }
+              .shop-navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .flex.nav-incart .description p {
+                color: #7e7e7e; }
+              .shop-navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .flex.nav-incart .description .color {
+                color: #9347ff; }
+            .shop-navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .flex.nav-incart > i {
+              cursor: pointer;
+              color: #fff;
+              font-size: 2rem; }
+          .shop-navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .nav-cart-total {
+            margin-top: 1rem;
+            padding: 1rem 0;
+            border-top: 0.1px #444444 solid;
+            border-bottom: 0.1px #444444 solid;
+            width: 100%;
+            color: #919191;
+            font-weight: bold;
+            font-size: 1.2rem; }
+          .shop-navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .flex.nav-cart-bottom {
+            width: 100%;
+            justify-content: space-evenly;
+            color: #fff;
+            font-weight: bold; }
+            .shop-navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .flex.nav-cart-bottom .left,
+            .shop-navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .flex.nav-cart-bottom .right {
+              cursor: pointer;
+              flex: 1;
+              height: 100%;
+              padding: 2rem; }
+            .shop-navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .flex.nav-cart-bottom .left {
+              border-right: 0.1px #444444 solid; }
 
 .showcase {
   height: 100vh;
