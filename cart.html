@@ -53,47 +53,7 @@
                 <i class="fas fa-shopping-cart"></i>
                 <p class="in-cart">0</p>
               </a>
-              <div class="nav-shopping-cart show-or-hide">
-                <div class="flex nav-cart"> 
-                  <div class="flex nav-incart">
-                    <div class="img">
-                      <img src="./images/blackproduct-2.jpg" alt="">
-                    </div>
-
-                    <div class="description">
-                      <h3>Charcaol Black</h3>
-                      <p>1 <i class="fas fa-times"></i> <span class="color">$42.00</span> </p>
-                    </div>
-                   <i class="fas fa-times"></i>
-                   </div>
-                   <div class="flex nav-incart">
-                    <div class="img">
-                      <img src="./images/blackproduct-2.jpg" alt="">
-                    </div>
-
-                    <div class="description">
-                      <h3>Charcaol Black</h3>
-                      <p>1 <i class="fas fa-times"></i> <span class="color">$42.00</span> </p>
-                    </div>
-                   <i class="fas fa-times"></i>
-                   </div>
-
-                   <div class="nav-cart-total">
-                     <p>Total: $42.00</p>
-                   </div>
-                   <div class="flex nav-cart-bottom">
-                     <div class="left">
-                        
-                        <span><i class="fas fa-eye"></i> View Cart</span>
-                     </div>
-                     <div class="right">
-                        
-                        <span><i class="far fa-check-circle"></i> Check Out</span>
-                     </div>
-                   </div>
-                </div>
-                
-              </div>
+              <div id="nav-cart"></div>
             </div>
           </div>
         </div>
@@ -267,8 +227,21 @@
       integrity="sha512-jGARnXmmqjqH0OuF7bFoLjZiVwFwoFvkgGqJpUf2TNjMnKjK1rrVCwmFoUGq564c2Auaf6ULAknrnUGKK1SnqQ=="
       crossorigin="anonymous"
     ></script>
+<script>
+  function loadIncartNo() {
+  let IncartNo;
+  if (!localStorage.getItem("IncartNoKey")) {
+    IncartNo = 0;
+  } else {
+    IncartNo = JSON.parse(localStorage.getItem("IncartNoKey"));
+  }
+  navIncart.innerHTML = IncartNo;
 
-    <script src="./js/app.js"></script>
+  updateNavCart(IncartNo);
+}
+loadIncartNo();
+</script>
     <script src="./js/cart.js"></script>
+    
   </body>
 </html>

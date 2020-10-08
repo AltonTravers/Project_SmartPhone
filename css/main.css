@@ -133,6 +133,8 @@ img {
         .navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart {
           flex-direction: column;
           padding-top: 1rem; }
+          .navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .nav-cart-item {
+            width: 100%; }
           .navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .flex.nav-incart {
             box-sizing: border-box;
             margin: 0.5rem 0;
@@ -257,6 +259,8 @@ img {
         .shop-navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart {
           flex-direction: column;
           padding-top: 1rem; }
+          .shop-navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .nav-cart-item {
+            width: 100%; }
           .shop-navbar .flex .cart-icon .nav-shopping-cart .flex.nav-cart .flex.nav-incart {
             box-sizing: border-box;
             margin: 0.5rem 0;
