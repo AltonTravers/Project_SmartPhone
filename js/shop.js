@@ -23,7 +23,7 @@ $(() => {
   hoverTimeout = setTimeout(function () {
     $(".nav-shopping-cart").addClass("show-or-hide");
   }, 1000);
-  $(".nav-cart-icon, .nav-shopping-cart").hover(
+  $(".nav-cart-icon, #nav-cart").hover(
     function () {
       clearTimeout(hoverTimeout);
       $(".nav-shopping-cart").removeClass("show-or-hide");
@@ -35,12 +35,96 @@ $(() => {
     }
   );
 });
-const navIncart = document.querySelector(".in-cart");
+let products = [
+  {
+    name: "Charocal Black",
+    tag: "charocalblack",
+    price: 42.0,
+    inCart: 0,
+    img: "./images/blackproduct-2.jpg",
+  },
+  {
+    name: "Golden Sunset",
+    tag: "goldensunset",
+    price: 25.5,
+    inCart: 0,
+    img: "./images/goldproduct-1.jpg",
+  },
+  {
+    name: "Light Pink",
+    tag: "lightpink",
+    price: 25.5,
+    inCart: 0,
+    img: "./images/pinkproduct-1.jpg",
+  },
+  {
+    name: "Mint Green",
+    tag: "mintgreen",
+    price: 25.5,
+    inCart: 0,
+    img: "./images/greenproduct-1.jpg",
+  },
+];
 
-document.addEventListener("click", (e) => console.log(e.target));
+const addToClass = document.querySelectorAll(".add-to-class");
+for (let i = 0; i < addToClass.length; i++) {
+  addToClass[i].addEventListener("click", (e) => {
+    addItemTocart(products[i]);
+    addIncartNo();
+    // updateNavCart();
+    e.preventDefault();
+  });
+}
 
-function updateNavCart() {
-  const tp = JSON.parse(localStorage.getItem("totalPriceKey"));
+function addItemTocart(product) {
+  if (!localStorage.getItem("productKey")) {
+    let productsIncart;
+    product.inCart = 1;
+    productsIncart = { [product.tag]: product };
+    localStorage.setItem("productKey", JSON.stringify(productsIncart));
+  } else {
+    let productsIncart;
+    productsIncart = JSON.parse(localStorage.getItem("productKey"));
+    if (productsIncart[product.tag] !== undefined) {
+      productsIncart[product.tag].inCart += 1;
+    } else {
+      product.inCart = 1;
+      productsIncart = { ...productsIncart, [product.tag]: product };
+    }
+    localStorage.setItem("productKey", JSON.stringify(productsIncart));
+  }
+}
+
+function addIncartNo() {
+  let IncartNo;
+  if (!localStorage.getItem("IncartNoKey")) {
+    IncartNo = 1;
+    localStorage.setItem("IncartNoKey", JSON.stringify(IncartNo));
+  } else {
+    IncartNo = JSON.parse(localStorage.getItem("IncartNoKey")) + 1;
+    localStorage.setItem("IncartNoKey", JSON.stringify(IncartNo));
+  }
+  loadIncartNo();
+}
+
+function loadIncartNo() {
+  const navIncart = document.querySelector(".in-cart");
+
+  let IncartNo;
+  if (!localStorage.getItem("IncartNoKey")) {
+    IncartNo = 0;
+  } else {
+    IncartNo = JSON.parse(localStorage.getItem("IncartNoKey"));
+  }
+  navIncart.innerHTML = IncartNo;
+  updateNavCart(IncartNo);
+  deleteNavIncartItem();
+}
+
+function updateNavCart(IncartNo) {
+  console.log("running");
+
+  let tp = JSON.parse(localStorage.getItem("totalPriceKey"));
 
   if (JSON.parse(localStorage.getItem("IncartNoKey")) > 0) {
     const navCart = document.querySelector("#nav-cart");
@@ -55,7 +139,7 @@ function updateNavCart() {
     </div>
 
     <div class="nav-cart-total">
-      <p>Total: $${tp}</p>
+      <p id='total'>Total: $${tp}</p>
     </div>
     <div class="flex nav-cart-bottom">
       <a href="cart.html" class="left">
@@ -99,12 +183,16 @@ function updateNavCart() {
       console.log(totalPrice);
       localStorage.setItem("totalPriceKey", JSON.stringify(totalPrice));
     }
+    document.querySelector("#total").innerHTML = `
+    Total: $${totalPrice}
+    `;
   }
 }
-
 function deleteNavIncartItem() {
-  const deleteItem = document.querySelectorAll(".delete");
+  let deleteItem = document.querySelectorAll(".delete");
+  console.log(deleteItem);
   for (let i = 0; i < deleteItem.length; i++) {
+    console.log("running");
     deleteItem[i].addEventListener("click", (e) => {
       console.log(i);
       let product = JSON.parse(localStorage.getItem("productKey"));
@@ -121,6 +209,7 @@ function deleteNavIncartItem() {
       console.log(productValue[i]);
       incartNo = incartNo - productValue[i].inCart;
       console.log(incartNo);
+      console.log(product[target]);
       delete product[target];
 
       localStorage.setItem("IncartNoKey", JSON.stringify(incartNo));
@@ -131,18 +220,4 @@ function deleteNavIncartItem() {
     });
   }
 }
-
-function loadIncartNo() {
-  let IncartNo;
-  if (!localStorage.getItem("IncartNoKey")) {
-    IncartNo = 0;
-  } else {
-    IncartNo = JSON.parse(localStorage.getItem("IncartNoKey"));
-  }
-  navIncart.innerHTML = IncartNo;
-
-  updateNavCart(IncartNo);
-}
 loadIncartNo();
-deleteNavIncartItem();
-// document.addEventListener("click", (e) => updateNavCart());
