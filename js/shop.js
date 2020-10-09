@@ -34,6 +34,9 @@ $(() => {
       }, 1000);
     }
   );
+  $(".fa-bars").click(function () {
+    $(".hamburger-menu-ul").toggleClass("closed");
+  });
 });
 let products = [
   {

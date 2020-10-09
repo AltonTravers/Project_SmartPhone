@@ -40,7 +40,7 @@
         <div class="container">
           <div class="flex">
             <h1><span>Alton</span>Chan</h1>
-            <ul>
+            <ul  class="normal-menu">
               <li><a href="index.html">Home</a></li>
               <li><a href="index.html#gallery">Gallery</a></li>
               <li><a href="index.html#features">Features</a></li>
@@ -49,6 +49,9 @@
             </ul>
 
             <div class="cart-icon">
+              <div class="hamburger">
+                <i class="fas fa-bars"></i>
+              </div>
               <a href="#" class="nav-cart-icon">
                 <i class="fas fa-shopping-cart"></i>
                 <p class="in-cart">0</p>
@@ -56,6 +59,15 @@
               <div id="nav-cart"></div>
             </div>
           </div>
+        </div>
+        <div class="hamburger-menu">
+          <ul class="hamburger-menu-ul closed">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html#gallery">Gallery</a></li>
+              <li><a href="index.html#features">Features</a></li>
+              <li><a href="index.html#review">Reviews</a></li>
+              <li><a href="shop.html">Shop</a></li>
+          </ul>
         </div>
       </nav>
 
@@ -227,21 +239,21 @@
       integrity="sha512-jGARnXmmqjqH0OuF7bFoLjZiVwFwoFvkgGqJpUf2TNjMnKjK1rrVCwmFoUGq564c2Auaf6ULAknrnUGKK1SnqQ=="
       crossorigin="anonymous"
     ></script>
-<script>
-  function loadIncartNo() {
-  let IncartNo;
-  if (!localStorage.getItem("IncartNoKey")) {
-    IncartNo = 0;
-  } else {
-    IncartNo = JSON.parse(localStorage.getItem("IncartNoKey"));
-  }
-  navIncart.innerHTML = IncartNo;
+    <script>
+      function loadIncartNo() {
+      let IncartNo;
+      if (!localStorage.getItem("IncartNoKey")) {
+        IncartNo = 0;
+      } else {
+        IncartNo = JSON.parse(localStorage.getItem("IncartNoKey"));
+      }
+      navIncart.innerHTML = IncartNo;
 
-  updateNavCart(IncartNo);
-}
-loadIncartNo();
-</script>
-    <script src="./js/cart.js"></script>
-    
+      updateNavCart(IncartNo);
+    }
+    loadIncartNo();
+    </script>
+        <script src="./js/cart.js"></script>
+        
   </body>
 </html>

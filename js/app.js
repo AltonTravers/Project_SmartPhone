@@ -3,7 +3,7 @@ $(() => {
   $(document).scroll(function () {
     const nav = $(".navbar");
     const shopNav = $(".shop-navbar");
-    nav.toggleClass("navbar-dark", $(this).scrollTop() > nav.height());
+    nav.toggleClass("navbar-dark", $(this).scrollTop() > nav.height() / 2);
     shopNav.toggleClass("navbar-dark", $(this).scrollTop() > shopNav.height());
   });
 
@@ -34,6 +34,10 @@ $(() => {
       }, 1000);
     }
   );
+
+  $(".fa-bars").click(function () {
+    $(".hamburger-menu-ul").toggleClass("closed");
+  });
 });
 const navIncart = document.querySelector(".in-cart");
 

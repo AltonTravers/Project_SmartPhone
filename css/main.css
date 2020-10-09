@@ -69,6 +69,12 @@ img {
 .show-or-hide {
   display: none !important; }
 
+.hamburger {
+  display: none; }
+
+.hamburger-menu {
+  display: none; }
+
 .navbar {
   width: 100%;
   position: fixed;
@@ -99,6 +105,7 @@ img {
     .navbar .flex .cart-icon {
       position: relative;
       display: flex;
+      align-items: center;
       justify-content: flex-end;
       flex: 1; }
       .navbar .flex .cart-icon a {
@@ -223,6 +230,7 @@ img {
           color: #7e7e7e; }
     .shop-navbar .flex .cart-icon {
       display: flex;
+      align-items: center;
       justify-content: flex-end;
       position: relative;
       flex: 1; }
@@ -1143,3 +1151,37 @@ img {
 .slick-prev {
   z-index: 11;
   left: -2.8rem; }
+
+@media screen and (max-width: 1100px) {
+  .normal-menu {
+    display: none !important; }
+  .hamburger {
+    display: unset;
+    margin-right: 1.5rem;
+    font-size: 1.5rem;
+    padding: 1.5rem 0; }
+    .hamburger i {
+      cursor: pointer; }
+  .hamburger-menu {
+    display: unset; }
+    .hamburger-menu ul {
+      background: #2e2e2e !important;
+      color: #fff;
+      padding: 0 2rem; }
+      .hamburger-menu ul li {
+        padding: 1rem;
+        border-bottom: 0.5px dotted #444444; }
+        .hamburger-menu ul li:last-child {
+          border-bottom: none; }
+        .hamburger-menu ul li a:hover {
+          color: #7e7e7e; }
+  .closed {
+    display: none; }
+  .showcase-content {
+    box-sizing: border-box;
+    padding: 0 4rem;
+    margin: 0 !important; }
+  .showcase-img {
+    display: none; }
+  .features2-content.flex {
+    margin-left: 6% !important; } }

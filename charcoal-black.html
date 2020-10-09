@@ -46,15 +46,18 @@
         <div class="container">
           <div class="flex">
             <h1><span>Alton</span>Chan</h1>
-            <ul>
+            <ul  class="normal-menu">
               <li><a href="index.html">Home</a></li>
               <li><a href="index.html#gallery">Gallery</a></li>
               <li><a href="index.html#features">Features</a></li>
               <li><a href="index.html#review">Reviews</a></li>
-              <li><a href="#">Shop</a></li>
+              <li><a href="shop.html">Shop</a></li>
             </ul>
 
             <div class="cart-icon">
+              <div class="hamburger">
+                <i class="fas fa-bars"></i>
+              </div>
               <a href="cart.html" class="nav-cart-icon">
                 <i class="fas fa-shopping-cart"></i>
                 <p class="in-cart">0</p>
@@ -62,6 +65,15 @@
               <div id="nav-cart"></div>
             </div>
           </div>
+        </div>
+        <div class="hamburger-menu">
+          <ul class="hamburger-menu-ul closed">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#gallery">Gallery</a></li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#review">Reviews</a></li>
+            <li><a href="shop.html">Shop</a></li>
+          </ul>
         </div>
       </nav>
     </header>
@@ -319,26 +331,10 @@
                 </form>
               </div>
           `
-        }
-
-        let product = [
-          {
-            name: "Charocal Black",
-            tag: "charocalblack",
-            price: 42.0,
-            inCart: 0,
-            img: "./images/blackproduct-2.jpg",
-          },
-        ]
-
-        document.querySelector('.add-to-cart').addEventListener('click', e => {
-          addItemTocart(product);
-          addIncartNo();
-          // updateNavCart();
-          e.preventDefault();
-        })
-      }
+        }}
     </script>
+
+    
     <script src="./js/black.js"></script>
   </body>
 </html>
