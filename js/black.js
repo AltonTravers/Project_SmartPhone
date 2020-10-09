@@ -58,8 +58,10 @@ function disableAddDeduct() {
 function addItemTocart(product) {
   if (!localStorage.getItem("productKey")) {
     let productsIncart;
+
     product.inCart = parseInt(itemNo.innerHTML);
     productsIncart = { [product.tag]: product };
+    productsIncart[product.tag].inCart = parseInt(itemNo.innerHTML);
     localStorage.setItem("productKey", JSON.stringify(productsIncart));
   } else {
     let productsIncart;
