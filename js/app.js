@@ -8,9 +8,9 @@ $(() => {
   });
 
   // slide show
-  $(".gallery-slideshow .slick").slick({ dots: true });
+  $(".gallery-slideshow .slick1").slick({ dots: true });
 
-  $(".gallery-slideshow .slick").slickLightbox();
+  $(".gallery-slideshow .slick1").slickLightbox();
 
   $(".review-slick").slick({
     dots: false,
