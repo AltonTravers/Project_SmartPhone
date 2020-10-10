@@ -1178,7 +1178,7 @@ img {
   .slick1 > .grid-3 {
     grid-template-rows: repeat(1, 250px); } }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .container.features-1 > .flex {
     flex-direction: column; }
   .container.features-2 > .flex {
