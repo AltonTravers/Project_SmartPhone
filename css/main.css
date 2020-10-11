@@ -1348,7 +1348,9 @@ img {
     width: 70%;
     margin: auto; }
     .cart-container .cart-total.flex .left {
-      display: none; } }
+      display: none; }
+  .phone-cart.grid-1 .card-phone {
+    margin-top: 1rem; } }
 
 @media screen and (max-width: 500px) {
   .showcase .flex .showcase-content {
