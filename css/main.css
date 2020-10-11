@@ -1302,4 +1302,5 @@ img {
     display: block !important; }
   .navbar .flex .cart-icon .nav-shopping-cart {
     top: 70px;
-    right: -20px; } }
+    right: -20px;
+    width: 100%; } }
