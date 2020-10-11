@@ -8,9 +8,17 @@ $(() => {
   });
 
   // slide show
-  $(".gallery-slideshow .slick1").slick({ dots: true });
+  $(".gallery-slideshow1 .slick1").slick({ dots: true });
 
-  $(".gallery-slideshow .slick1").slickLightbox();
+  $(".gallery-slideshow1 .slick1").slickLightbox();
+
+  $(".gallery-slideshow2 .slick2").slick({ dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: true });
+
+  $(".gallery-slideshow2 .slick2").slickLightbox();
 
   $(".review-slick").slick({
     dots: false,
