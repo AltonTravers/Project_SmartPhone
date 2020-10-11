@@ -128,6 +128,35 @@ function loadCartContent() {
     </div>
 
         `;
+      const phoneCart = document.querySelector('.phone-cart');
+      phoneCart.innerHTML += `
+      <div class="card-phone">
+      <div class="remove-item">
+        <i class="fas fa-times"></i>
+      </div>
+      <div class="flex phone-cart-product">
+        <h3>Product:</h3>
+        <h3>${itemValues[i].name}</h3>
+      </div>
+      <div class="flex phone-cart-price">
+        <h3>Price:</h3>
+        <h3>$${itemValues[i].price.toFixed(
+          2
+        )}</h3>
+      </div>
+      <div class="flex phone-cart-quantity">
+        <h3>Quantity:</h3>
+        <div class="no-of-product">
+          <span class="add-item-no"><i class="fas fa-arrow-up"></i></span>
+          <span class="item-no">${itemValues[i].inCart}</span>
+          <span class="deduct-item-no"
+            ><i class="fas fa-arrow-down"></i
+          ></span>
+        </div>
+      </div>
+    </div>
+
+      `
     }
     let totalPrice = 0;
     for (let i = 0; i < itemKeys.length; i++) {
