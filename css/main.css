@@ -1301,4 +1301,5 @@ img {
   .gallery-slideshow2 {
     display: block !important; }
   .navbar .flex .cart-icon .nav-shopping-cart {
-    top: 70px; } }
+    top: 70px;
+    right: -20px; } }
