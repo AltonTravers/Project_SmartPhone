@@ -464,6 +464,7 @@ img {
           pointer-events: none;
           transition: all 0.5s ease; }
   .gallery .gallery-slideshow2 {
+    display: none;
     padding: 5rem 0 7rem;
     overflow-x: hidden;
     margin: auto;
