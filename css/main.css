@@ -1365,8 +1365,11 @@ img {
         border-bottom: 0.5px dotted #444444; }
         .hamburger-menu ul li:last-child {
           border-bottom: none; }
-        .hamburger-menu ul li a:hover {
-          color: #7e7e7e; }
+        .hamburger-menu ul li a {
+          display: inline-block;
+          width: 100%; }
+          .hamburger-menu ul li a:hover {
+            color: #7e7e7e; }
   .closed {
     display: none; }
   .showcase-content {
