@@ -148,9 +148,12 @@ function updateNavCart(IncartNo) {
       <a href="cart.html" class="left">
         <span><i class="fas fa-eye"></i> View Cart</span>
       </a>
-      <div class="right">
+
+      <a href="checkout.html" class="right">
         <span><i class="far fa-check-circle"></i> Check Out</span>
-      </div>
+      </a>   
+     
+
     </div>
   </div>
 </div>
