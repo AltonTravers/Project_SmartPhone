@@ -1075,7 +1075,7 @@ img {
       color: #333; }
 
 .cart-container {
-  margin: 5rem 0 0rem; }
+  margin: 5rem 2rem 0rem; }
   .cart-container .empty.flex {
     align-items: flex-start;
     justify-content: unset;
@@ -1435,10 +1435,10 @@ img {
   .card-phone {
     display: initial !important; }
   .cart-container {
-    margin: 3rem 0 0rem; }
+    margin: 3rem 2rem 0rem; }
   .cart-container .cart-total.flex {
-    width: 70%;
-    margin: auto; }
+    max-width: 400px;
+    margin: 0 auto; }
     .cart-container .cart-total.flex .left {
       display: none; }
   .phone-cart.grid-1 {
