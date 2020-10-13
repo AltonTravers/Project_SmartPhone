@@ -173,7 +173,7 @@ function loadCartContent() {
             <div>$<span class='total-price'>${totalPrice.toFixed(2)}</div>
             </span></div>
         <div class="check-out">
-            <a href="#" class="btn">PROCEED TO CHECKOUT</a>
+            <a href="checkout.html" class="btn">PROCEED TO CHECKOUT</a>
         </div>
     </div>
 </div> 

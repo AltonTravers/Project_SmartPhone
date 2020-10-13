@@ -1,3 +1,53 @@
+$(() => {
+    // scrolled Navbar
+    $(document).scroll(function () {
+      const nav = $(".navbar");
+      const shopNav = $(".shop-navbar");
+      nav.toggleClass("navbar-dark", $(this).scrollTop() > nav.height() / 2);
+      shopNav.toggleClass("navbar-dark", $(this).scrollTop() > shopNav.height());
+    });
+  
+    // slide show
+    $(".gallery-slideshow1 .slick1").slick({ dots: true });
+  
+    $(".gallery-slideshow1 .slick1").slickLightbox();
+  
+    $(".gallery-slideshow2 .slick2").slick({ dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 1,
+      adaptiveHeight: true });
+  
+    $(".gallery-slideshow2 .slick2").slickLightbox();
+  
+    $(".review-slick").slick({
+      dots: false,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 1,
+      adaptiveHeight: true,
+    });
+  
+    hoverTimeout = setTimeout(function () {
+      $(".nav-shopping-cart").addClass("show-or-hide");
+    }, 1000);
+    $(".nav-cart-icon, .nav-shopping-cart").hover(
+      function () {
+        clearTimeout(hoverTimeout);
+        $(".nav-shopping-cart").removeClass("show-or-hide");
+      },
+      function () {
+        hoverTimeout = setTimeout(function () {
+          $(".nav-shopping-cart").addClass("show-or-hide");
+        }, 1000);
+      }
+    );
+  
+    $(".fa-bars").click(function () {
+      $(".hamburger-menu-ul").toggleClass("closed");
+    });
+  });
+
 const orderContent = document.querySelector('.order-content')
 const product = JSON.parse(localStorage.getItem('productKey'))
 const productKey = Object.keys(product)
