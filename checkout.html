@@ -72,13 +72,26 @@
       </nav>
 
       <!-- Checkout -->
+      
+
       <div class="shop" id="shop">
         <div class="container">
           <div class="shop-title">
             <h1>Shop</h1>
             <p>Home > <span>Checkout</span></p>
           </div>
-          <form action="#" class="checkout-content flex">
+          <div class="warning">
+             <!-- <div class="invalid flex">
+              <i class="fas fa-exclamation"></i>
+              <div class="invalid-item">
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+            </div> -->
+          </div>
+         
+          <form action="#" class="checkout-content flex" id='form'>
                 <h1>Billing details</h1>
               <div class="info flex">
                              <div class="left flex">
@@ -86,28 +99,28 @@
                 <div class="flex">
                     <div class="first-name">
                         <label for="firstName">First name <i class="far fa-check-circle"></i></label> 
-                        <input type="text" name="firstName">
+                        <input type="text" name="firstName" id="firstName">
                     </div>
                     <div class="last-name">
                         <label for="lastName">Last name <i class="far fa-check-circle"></i></label> 
-                        <input type="text" name="lastName">
+                        <input type="text" name="lastName" id="lastName">
                     </div>
                 </div>
                 <label for="streetAddress">Street address <i class="far fa-check-circle"></i></label>
-                <input type="text" name="streetAddress" placeholder="House number and street name">
-                <input type="text" name="streetAddress" placeholder="Apartment, suite, unit, etc. (optional)"> 
+                <input type="text" name="streetAddress1" id="streetAddress1" placeholder="House number and street name">
+                <input type="text" name="streetAddress2" id="streetAddress2" placeholder="Apartment, suite, unit, etc. (optional)"> 
 
                 <label for="phone">Phone <i class="far fa-check-circle"></i></label>
-                <input type="nubmer">
+                <input type="nubmer" id="phone">
 
                 <label for="email">Email address <i class="far fa-check-circle"></i></label>
-                <input type="email">
+                <input type="email" id="email">
 
                 
                 </div>
                 <div class="right">
                     <label for="additionalInfo">Addititonal information</label>
-                    <textarea name="additionalInfo"  cols="30" rows="10" placeholder="Notes about your order, e.g. special notes for delivery"></textarea>
+                    <textarea name="additionalInfo" id="additionalInfo"  cols="30" rows="10" placeholder="Notes about your order, e.g. special notes for delivery"></textarea>
                 </div>
                 
               </div>
