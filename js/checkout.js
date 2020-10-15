@@ -125,6 +125,7 @@ function checkInvalid(e) {
     e.preventDefault();
   } else if (/^[a-zA-Z]+$/.test(firstNameValue) === false) {
     warningBox += `<p>Invalid Billing First name.</p>`;
+    firstName.previousElementSibling.style.color = "#AA0000";
     e.preventDefault();
   } else {
     firstName.previousElementSibling.style.color = "#11d833";
@@ -135,6 +136,7 @@ function checkInvalid(e) {
     e.preventDefault();
   } else if (/^[a-zA-Z]+$/.test(lastNameValue) === false) {
     warningBox += `<p>Invalid Billing Last name.</p>`;
+    lastName.previousElementSibling.style.color = "#AA0000";
     e.preventDefault();
   } else {
     lastName.previousElementSibling.style.color = "#11d833";
@@ -152,6 +154,8 @@ function checkInvalid(e) {
     e.preventDefault();
   } else if (/^\d{8}$/.test(phoneValue) === false) {
     warningBox += `<p>Invalid Billing Phone.</p>`;
+    phone.previousElementSibling.style.color = "#AA0000";
+
     e.preventDefault();
   } else {
     phone.previousElementSibling.style.color = "#11d833";
@@ -166,6 +170,7 @@ function checkInvalid(e) {
     ) === false
   ) {
     warningBox += `<p>Invalid Billing Email address.</p>`;
+    email.previousElementSibling.style.color = "#AA0000";
     e.preventDefault();
   } else {
     email.previousElementSibling.style.color = "#11d833";
