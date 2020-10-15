@@ -103,7 +103,6 @@ const email = document.querySelector("#email");
 form.addEventListener("submit", (e) => {
   checkInvalid(e);
 });
-
 function checkInvalid(e) {
   const firstNameValue = firstName.value.trim();
   const lastNameValue = lastName.value.trim();
@@ -113,40 +112,66 @@ function checkInvalid(e) {
   const warning = document.querySelector(".warning");
 
   let warningBox = ``;
+  warning.innerHTML = ``;
 
   firstName.previousElementSibling.style.color = "unset";
   lastName.previousElementSibling.style.color = "unset";
   streetAddress1.previousElementSibling.style.color = "unset";
   phone.previousElementSibling.style.color = "unset";
   email.previousElementSibling.style.color = "unset";
-
   if (firstNameValue === "") {
     warningBox += `<p>Billing First name is a required field.</p>`;
     firstName.previousElementSibling.style.color = "#AA0000";
     e.preventDefault();
+  } else if (/^[a-zA-Z]+$/.test(firstNameValue) === false) {
+    warningBox += `<p>Invalid Billing First name.</p>`;
+    e.preventDefault();
+  } else {
+    firstName.previousElementSibling.style.color = "#11d833";
   }
   if (lastNameValue === "") {
     warningBox += `<p>Billing Last name is a required field.</p>`;
     lastName.previousElementSibling.style.color = "#AA0000";
     e.preventDefault();
+  } else if (/^[a-zA-Z]+$/.test(lastNameValue) === false) {
+    warningBox += `<p>Invalid Billing Last name.</p>`;
+    e.preventDefault();
+  } else {
+    lastName.previousElementSibling.style.color = "#11d833";
   }
   if (streetAddress1Value === "") {
     warningBox += `<p>Billing Street address is a required field.</p>`;
     streetAddress1.previousElementSibling.style.color = "#AA0000";
     e.preventDefault();
+  } else {
+    streetAddress1.previousElementSibling.style.color = "#11d833";
   }
   if (phoneValue === "") {
     warningBox += `<p>Billing Phone is a required field.</p>`;
     phone.previousElementSibling.style.color = "#AA0000";
     e.preventDefault();
+  } else if (/^\d{8}$/.test(phoneValue) === false) {
+    warningBox += `<p>Invalid Billing Phone.</p>`;
+    e.preventDefault();
+  } else {
+    phone.previousElementSibling.style.color = "#11d833";
   }
   if (emailValue === "") {
     warningBox += `<p>Billing Email address is a required field.</p>`;
     email.previousElementSibling.style.color = "#AA0000";
     e.preventDefault();
+  } else if (
+    /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/.test(
+      emailValue
+    ) === false
+  ) {
+    warningBox += `<p>Invalid Billing Email address.</p>`;
+    e.preventDefault();
+  } else {
+    email.previousElementSibling.style.color = "#11d833";
   }
 
-  if (warning !== ``) {
+  if (warningBox !== ``) {
     warning.innerHTML = `
       <div class="invalid flex">
         <i class="fas fa-exclamation"></i>
@@ -155,5 +180,21 @@ function checkInvalid(e) {
         </div>
       </div>
       `;
+    window.scrollTo(0, 0);
+  } else {
+    if (
+      confirm(
+        "Thanks for visiting my website! Do you want to leave this page?"
+      ) === true
+    ) {
+      setTimeout(() => {
+        window.location.assign("https://www.youtube.com/");
+      }, 1000);
+      console.log("true");
+    } else {
+      console.log("false");
+    }
   }
+
+  e.preventDefault();
 }
