@@ -1476,7 +1476,10 @@ img {
   .gallery-slideshow1 {
     display: none; }
   .gallery-slideshow2 {
-    display: block !important; } }
+    display: block !important; }
+  .cart-container .cart-total.flex .right .check-out {
+    display: flex;
+    justify-content: center; } }
 
 @media screen and (max-width: 500px) {
   .showcase .flex .showcase-content {
